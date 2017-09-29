@@ -4,4 +4,6 @@ const router        = express.Router();
 
 router.use('/api', journalRoutes);
 
+
+
 module.exports = router;
