@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { JournalEntriesService } from './services/journal-entries.service';
+import { NewEntryService } from './services/new-entry.service';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,7 +15,7 @@ import { EntryFormComponent } from './components/entry-form/entry-form.component
 
 const routes: Routes = [
   { path: '',  component: EntryListComponent },
-  {path: 'entries/:id', component: SingleEntryComponent}
+  { path: 'entries/:id', component: SingleEntryComponent }
 ];
 
 @NgModule({
@@ -31,7 +32,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
 
   ],
-  providers: [JournalEntriesService],
+  providers: [JournalEntriesService, NewEntryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

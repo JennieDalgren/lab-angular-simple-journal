@@ -1,3 +1,8 @@
-<p>
-  entry-form works!
-</p>
+
+<h3>Add new Journal Entry</h3>
+<form (ngSubmit)="handleSubmitForm(myForm)" #myForm="ngForm" novalidate>
+  <label>Title</label>
+  <input type="text" #myTitle=ngModel name="newTitle" [(ngModel)]="newTitle" required/>
+  <textarea name="newContent" #myContent=ngModel [(ngModel)]="newContent" required></textarea>
+  <button type="submit">Add</button>
+</form>
