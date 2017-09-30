@@ -1,8 +1,7 @@
 
-<h3>Add new Journal Entry</h3>
+<h4>New Journal Entry</h4>
 <form (ngSubmit)="handleSubmitForm(myForm)" #myForm="ngForm" novalidate>
-  <label>Title</label>
-  <input type="text" #myTitle=ngModel name="newTitle" [(ngModel)]="newTitle" required/>
-  <textarea name="newContent" #myContent=ngModel [(ngModel)]="newContent" required></textarea>
+  <input placeholder="title" type="text" #myTitle=ngModel name="newTitle" [(ngModel)]="newTitle" required/><br>
+  <textarea rows="8" cols="20" placeholder="write your thoughts here..." name="newContent" #myContent=ngModel [(ngModel)]="newContent" required></textarea><br>
   <button type="submit">Add</button>
 </form>

@@ -9,8 +9,8 @@ export class NewEntryService {
   new: any = {};
   constructor(private http: Http) { }
 
-  insertNew(myformValues) {
-  this.new = { 'title': myformValues.newTitle,'content': myformValues.newContent };
+  insertNew(myform) {
+  this.new = { 'title': myform.newTitle,'content': myform.newContent };
 
   return this.http.post('http://localhost:3000/api/journal-entries', this.new )
    .map((res: Response) => {
