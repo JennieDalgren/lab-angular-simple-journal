@@ -9,16 +9,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { EntryListComponent } from './components/entry-list/entry-list.component';
+import { SingleEntryComponent } from './components/single-entry/single-entry.component';
+import { EntryFormComponent } from './components/entry-form/entry-form.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home',  component: EntryListComponent }
+  { path: '',  component: EntryListComponent },
+  {path: 'entries/:id', component: SingleEntryComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryListComponent
+    EntryListComponent,
+    SingleEntryComponent,
+    EntryFormComponent
   ],
   imports: [
     BrowserModule,

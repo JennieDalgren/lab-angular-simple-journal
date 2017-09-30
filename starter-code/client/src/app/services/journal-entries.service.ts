@@ -14,4 +14,9 @@ export class JournalEntriesService {
       .map((res: Response) => res.json());
   }
 
+  getEntry(id: string){
+    return this.http.get(`http://localhost:3000/api/journal-entries/${id}`)
+      .map((res: Response) => res.json());
+  }
+
 }

@@ -8,11 +8,14 @@ import { JournalEntriesService } from '../../services/journal-entries.service'
 })
 export class EntryListComponent implements OnInit {
   entries: Object[];
+
   constructor(private JournalEntriesService: JournalEntriesService) { }
 
   ngOnInit() {
     this.JournalEntriesService.getEntryList()
-    .subscribe((entries) => this.entries = entries);
+    .subscribe((data) => this.entries = data);
   }
+
+
 
 }
